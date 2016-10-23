@@ -43,4 +43,33 @@
 		color $Blanco
 		border none
 		text-transform uppercase
+		transitionBase(0.10s)
 	
+		&:hover
+			color $Azul
+			transform translateY(-5px)
+			text-shadow 1px 4px 0px $Negro
+
+.btns-respuestas
+	background-color $Azul
+	border none
+	box-shadow 0 2px 0 0 $Negro
+	color $Blanco
+	font-family $KBlanK
+	font-size 1rem
+	height 35px
+	margin-bottom 20px
+	text-transform uppercase
+	width 100%
+	
+	&:hover
+		background-color $AzulOs
+		color $Amarillo
+		transform translateY(-5px)
+		box-shadow 1px 4px 0px $Negro
+
+.respuesta-correcta
+	background-color $Verde
+
+.respuesta-incorrecta
+	background-color $Rojo
