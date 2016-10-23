@@ -8,8 +8,7 @@
   <meta name="description" content="Frontend BRM">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/Cinepolis/publication/css/frontend-brm.min.css">
   <!-- Web Fonts-->
   <link href="http://fonts.googleapis.com/css?family=Varela+Round|Roboto:400italic,300,700,400" rel="stylesheet" type="text/css"><!--[if lt IE]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,7 +36,7 @@
     </div>
   </header>
   <!--/-Header-->
-  <section class="cont-sec-home ocultar-sect">
+  <section class="cont-sec-home">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-5 col-xs-11 col-lg-offset-1 col-md-offset-3 col-sm-offset-1 col-xs-offset-1 cont-textH">
         <h2 class="textos-principales">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus est ab, dolorum adipisci expedita ipsum nihil in id rem sequi numquam similique repudiandae rerum optio reiciendis error suscipit facere quidem.</h2>
@@ -46,10 +45,10 @@
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-5 col-xs-11 col-lg-offset-1 col-md-offset-3 col-sm-offset-1 col-xs-offset-1">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 cont-btnG">
-          <button class="btns-home">Iniciar Sesion</button>
+          <button class="btns-home" id="inicia">Iniciar Sesion</button>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 cont-btnG">
-          <button class="btns-home">Registrarse</button>
+          <button class="btns-home" id="registra">Registrarse</button>
         </div>
       </div>
     </div>
@@ -76,32 +75,32 @@
         <h2 class="textos-principales sin-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui obcaecati, dicta id inventore.</h2>
       </div>
     </dov>
-    <div class="row">
-      <form class="col-lg-6 col-md-6 col-sm-5 col-xs-11 col-lg-offset-1 col-md-offset-3 col-sm-offset-1 col-xs-offset-1">
+    <form id="formRegistro">
+      <div class="row"></div>
+      <div class="col-lg-6 col-md-6 col-sm-5 col-xs-11 col-lg-offset-1 col-md-offset-3 col-sm-offset-1 col-xs-offset-1">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><em class="asteric">*</em>
-          <input type="text" placeholder="Nombres" name="Nombres" required><em class="asteric">*</em>
-          <input type="text" placeholder="Apellidos" name="Apellidos" required><em class="asteric">*</em>
-          <input type="text" placeholder="Cédula" name="Cedula" required><em class="asteric">*</em>
-          <input type="text" placeholder="Fecha de Nacimiento" name="Fecha de Nacimiento" required>
+          <input type="text" placeholder="Nombres" name="nombre" required><em class="asteric">*</em>
+          <input type="text" placeholder="Apellidos" name="apellido" required><em class="asteric">*</em>
+          <input type="text" placeholder="Cédula" name="cedula" required><em class="asteric">*</em>
+          <input class="fechaDate" type="date" placeholder="Fecha de Nacimiento" name="fechaNacimiento" required>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><em class="asteric">*</em>
-          <select name="Ciudad" required>
+          <select name="ciudad" required>
             <option value="">Bogota</option>
             <option value="">Cali</option>
           </select><em class="asteric">*</em>
-          <input type="text" placeholder="Número de Celular" name="Número de Celular" required><em class="asteric">*</em>
-          <input type="text" placeholder="E-mail" name="E-mail" required><em class="asteric">*</em>
-          <input type="text" placeholder="Contraseña" name="Contraseña" required>
+          <input type="text" placeholder="Número de Celular" name="$celular" required><em class="asteric">*</em>
+          <input type="email" placeholder="E-mail" name="correo" required><em class="asteric">*</em>
+          <input type="password" placeholder="Contraseña" name="pass" required>
         </div>
-      </form>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-3 col-sm-4 col-xs-11 col-lg-offset-0 col-md-offset-0 col-sm-offset-2 col-xs-offset-2 cont-form-iniciaS">
-        <input class="check-terminos" type="checkbox" name="Términos"><em class="text-ter-formulario">Acepto <a class="abrir-terminos" href="#">Términos y Condiciones</a></em>
-        <input class="check-terminos" type="checkbox" name="Data"><em class="text-ter-formulario con-bottom">Autorizo el manejo de mi información</em>
-        <button class="btns-registros" type="submit" value="Ingresar" data-action="bea">Iniciar sesión</button>
       </div>
-    </div>
+      <div class="row"></div>
+      <div class="col-lg-4 col-md-3 col-sm-4 col-xs-11 col-lg-offset-0 col-md-offset-0 col-sm-offset-2 col-xs-offset-2 cont-form-iniciaS">
+        <input class="check-terminos" type="checkbox" name="terminos" value="S" required><em class="text-ter-formulario">Acepto <a class="abrir-terminos" href="#">Términos y Condiciones</a></em>
+        <input class="check-terminos" type="checkbox" name="politicas" value="s" required><em class="text-ter-formulario con-bottom">Autorizo el manejo de mi información</em>
+        <button class="btns-registros" id="btn-registrar" type="submit" value="Registrarse">Registrarse</button>
+      </div>
+    </form>
   </section>
   <section class="cont-sec-codigo ocultar-sect">
     <div class="row">
@@ -117,7 +116,7 @@
       </div>
     </div>
   </section>
-  <sectioxn class="cont-sec-playJ ocultar-sect">
+  <section class="cont-sec-playJ ocultar-sect">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-5 col-xs-11 col-lg-offset-1 col-md-offset-3 col-sm-offset-1 col-xs-offset-1">
         <h2 class="textos-principales">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint sit quidem consectetur quia animi ipsum est! Consectetur, optio, reprehenderit?</h2>
@@ -128,7 +127,7 @@
       <div class="col-lg-4 col-md-2 col-sm-5 col-xs-11 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0 icono-play-juego"><a href="#"><img class="img-responsive" src="images/Inoco-Play.png"></a></div>
       <button class="btns-texto-solid col-lg-4 col-md-2 col-sm-5 col-xs-11 col-lg-offset-0 col-md-offset-5 col-sm-offset-0 col-xs-offset-0">Jugar</button>
     </div>
-  </sectioxn>
+  </section>
   <section class="cont-sec-trivia ocultar-sect">
     <div class="row">
       <div class="cont-preguntas">
@@ -246,5 +245,5 @@
   <script src="js/libs/jquery.js"></script>
   <script src="js/libs/bootstrap.min.js"></script>
   <script src="js/libs/jquery.validate.js"></script>
-  <script src="js/frontend-brm.js"></script>
+  <script src="js/funciones.js"></script>
 </body></html>

@@ -11,7 +11,7 @@ block description
 
 block content
 	
-	section.cont-sec-home.ocultar-sect
+	section.cont-sec-home
 		div.row
 			div.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1.cont-textH
 				h2.textos-principales
@@ -19,10 +19,10 @@ block content
 		div.row
 			div.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1
 				div.col-lg-6.col-md-6.col-sm-6.col-xs-6.cont-btnG
-					button.btns-home
+					button#inicia.btns-home
 						|Iniciar Sesion
 				div.col-lg-6.col-md-6.col-sm-6.col-xs-6.cont-btnG
-					button.btns-home
+					button#registra.btns-home
 						|Registrarse
 
 	section.cont-sec-iniciaS.ocultar-sect
@@ -46,32 +46,32 @@ block content
 			div.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1
 				h2.textos-principales.sin-bottom
 					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui obcaecati, dicta id inventore.
+		form#formRegistro
+			div.row
 
-		div.row
-
-			form.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1
+			div.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1
 
 				div.col-lg-6.col-md-6.col-sm-6.col-xs-6
 					em.asteric
 						|*
-					input(type="text", placeholder="Nombres", name="Nombres", required )
+					input(type="text", placeholder="Nombres", name="nombre", required )
 
 					em.asteric
 						|*
-					input(type="text", placeholder="Apellidos", name="Apellidos", required )
+					input(type="text", placeholder="Apellidos", name="apellido", required )
 
 					em.asteric
 						|*
-					input(type="text", placeholder="Cédula", name="Cedula", required )
+					input(type="text", placeholder="Cédula", name="cedula", required )
 
 					em.asteric
 						|*
-					input(type="text", placeholder="Fecha de Nacimiento", name="Fecha de Nacimiento", required )
+					input.fechaDate(type="date", placeholder="Fecha de Nacimiento", name="fechaNacimiento", required )
 				
 				div.col-lg-6.col-md-6.col-sm-6.col-xs-6
 					em.asteric
 						|*
-					select(name="Ciudad", required )
+					select(name="ciudad", required )
 						option(value="")
 							|Bogota
 
@@ -79,32 +79,32 @@ block content
 							|Cali
 					em.asteric
 						|*
-					input(type="text", placeholder="Número de Celular", name="Número de Celular", required )
+					input(type="text", placeholder="Número de Celular", name="$celular", required )
 
 					em.asteric
 						|*
-					input(type="text", placeholder="E-mail", name="E-mail", required )
+					input(type="email", placeholder="E-mail", name="correo", required )
 
 					em.asteric
 						|*
-					input(type="text", placeholder="Contraseña", name="Contraseña", required )
+					input(type="password", placeholder="Contraseña", name="pass", required )
 
-		div.row
+			div.row
 
 			div.col-lg-4.col-md-3.col-sm-4.col-xs-11.col-lg-offset-0.col-md-offset-0.col-sm-offset-2.col-xs-offset-2.cont-form-iniciaS
-				input.check-terminos(type="checkbox", name="Términos")
+				input.check-terminos(type="checkbox", name="terminos",value="S",required)
 
 				em.text-ter-formulario
 					|Acepto 
 					a.abrir-terminos(href="#")|Términos y Condiciones
 
-				input.check-terminos(type="checkbox", name="Data")
+				input.check-terminos(type="checkbox", name="politicas",value="s",required)
 
 				em.text-ter-formulario.con-bottom
 					|Autorizo el manejo de mi información
 
-				button.btns-registros(type="submit", value="Ingresar", data-action="bea")
-						|Iniciar sesión
+				button#btn-registrar.btns-registros(type="submit", value="Registrarse")
+						|Registrarse
 
 	section.cont-sec-codigo.ocultar-sect
 		div.row
@@ -116,7 +116,7 @@ block content
 				form
 					input(type="text", placeholder="Ingresa tu código")
 
-	sectioxn.cont-sec-playJ.ocultar-sect
+	section.cont-sec-playJ.ocultar-sect
 		div.row
 			div.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1
 				h2.textos-principales
