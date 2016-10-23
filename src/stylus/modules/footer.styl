@@ -1,14 +1,37 @@
 footer
 	background-image url("../images/Img-Sillas-Footer.png")
-	background-position 0 -95px
-	background-size cover
+	background-repeat no-repeat
+	background-size 100% 
 	bottom 0
-	color #fff
-	height 70px
+	height 100px
 	position absolute
 	width 100%
 	
 	.cont-text-footer
-		position fixed
+		background-color $Oscuro
 		bottom 0
+		padding 6px 0
+		position fixed
+		text-transform uppercase
+		width 100%
+	
+	ul.text-footer
+		margin 0 auto 0 calc(50% - 190px)
+		padding 0
+		
+		li
+			float left
+			list-style none
+			
+			a.terminos-f
+				
+				color $Amarillo
+				font-family $KBlanK
+				font-size 1.2rem
+				
+				&:hover
+					color $Azul
+					text-decoration none
+				
+	
 	
