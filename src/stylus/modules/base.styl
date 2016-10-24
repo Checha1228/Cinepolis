@@ -26,6 +26,51 @@ h2, h3
 	color $Blanco
 	font-family $KBlanK
 
+section
+	position relative
+	z-index 6
+
+/*CORTNINAS*/
+	.cont-cort-izq
+		position absolute
+		background-image url("../images/Img-Cort-Izq.png")
+		height 100vh
+		z-index 2
+		width 50%
+		top 0
+		animation cortI 1s linear
+		left -400px
+	
+	.cont-cort-izqB
+		position absolute
+		background-image url("../images/Img-Cort-Izq.png")
+		height 100vh
+		z-index 2
+		width 50%
+		top 0
+		animation cortI 1s linear
+		left 0
+	
+	.cont-cort-der
+		position absolute
+		background-image url("../images/Img-Cort-Der.png")
+		height 100vh
+		z-index 2
+		width 50%
+		top 0
+		right -400px
+		animation cortD 1s linear 
+	
+	.cont-cort-derB
+		position absolute
+		background-image url("../images/Img-Cort-Der.png")
+		height 100vh
+		z-index 2
+		width 50%
+		top 0
+		right 0
+
+
 .sin-bottom
 	margin-bottom 0
 
@@ -34,6 +79,9 @@ h2, h3
 
 .cont-text-TO
 	margin-top 5%
+
+.cont-text-Err
+	margin-top 2%
 	
 .ocultar-sect
 	display none
@@ -167,6 +215,77 @@ h2, h3
 .btn-cont
 	margin-left 29%
 	margin-top 1%	
+
+/*ERRO404*/
+
+.texto-Error
+	color $Blanco
+	font-family $KBlanKS
+	font-size 3rem
+	text-shadow 1px 1px 0px $Negro
+	text-transform uppercase
+
+.texto-Pagina
+	color $Blanco
+	font-family $KBlanKS
+	font-size 2.5rem
+	text-shadow 1px 1px 0px $Negro
+	text-transform uppercase
+	text-align center
+
+.cont-Error-4
+	
+	.numero-4A
+		color $Amarillo
+		font-size 20rem
+		font-family $KBlanKS
+		width 160px
+		height 200px
+		position absolute
+		float left
+		text-shadow 1px 1px 0px $Negro
+		z-index 4
+		
+		p
+			margin-top -47px
+	
+	.numero-4B
+		color $Amarillo
+		font-size 20rem
+		font-family $KBlanKS
+		width 160px
+		height 200px
+		position absolute
+		float left
+		text-shadow 1px 1px 0px $Negro
+		right 0
+		z-index 2
+		
+		p
+			margin-top -47px
+	
+	.cont-rollo-peli
+		background-image url("../images/Img-Cinta-Peli.png")
+		width 165px
+		height 165px
+		float left
+		position absolute
+		animation rollo 1s linear infinite
+		left calc(50% - 89px)
+		z-index 3
+	
+	.cont-cinta-1
+		position relative
+		z-index 1
+		left 32%
+		top 103px
+	
+	.cont-cinta-2
+		position relative
+		z-index 5
+		left 244px
+		top 67px
+		width 140px
 	
 
 

@@ -10,7 +10,11 @@ block description
 	meta(name="description", content="Frontend BRM" )
 
 block content
-	
+
+	div.cont-cort-izq
+
+	div.cont-cort-der
+
 	section.cont-sec-home
 		div.row
 			div.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1.cont-textH
@@ -32,12 +36,13 @@ block content
 					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit veniam quod libero, eaque similique est. Facilis, dicta repellendus alias.
 		div.row
 			div.col-lg-4.col-md-3.col-sm-4.col-xs-11.col-lg-offset-0.col-md-offset-0.col-sm-offset-2.col-xs-offset-2.cont-form-iniciaS
-				form
+				form#formLogin
 
-					input(type="text", placeholder="Número de usuario", for="Número de usuario")
+					input(type="email", placeholder="Correo",name="email", for="Número de usuario",required)
 
-					input(type="text", placeholder="Contraseña", for="Contraseña")
-
+					input(type="password", placeholder="Contraseña",name="pass", for="Contraseña",required)
+					input(type="hidden",name="varCtrl",value="3")
+					div#errorLogin
 					button.btns-registros(type="submit", value="Ingresar")
 						|Iniciar sesión
 
@@ -66,20 +71,22 @@ block content
 
 					em.asteric
 						|*
-					input.fechaDate(type="date", placeholder="Fecha de Nacimiento", name="fechaNacimiento", required )
+					input.fechaDate(type="text", placeholder="Fecha de Nacimiento", name="fechaNacimiento", required )
 				
 				div.col-lg-6.col-md-6.col-sm-6.col-xs-6
 					em.asteric
 						|*
 					select(name="ciudad", required )
-						option(value="")
+						option(value="",selected)
+							|Ciudad
+						option(value="Bogota")
 							|Bogota
 
-						option(value="")
+						option(value="Cali")
 							|Cali
 					em.asteric
 						|*
-					input(type="text", placeholder="Número de Celular", name="$celular", required )
+					input(type="text", placeholder="Número de Celular", name="celular", required )
 
 					em.asteric
 						|*
@@ -98,11 +105,12 @@ block content
 					|Acepto 
 					a.abrir-terminos(href="#")|Términos y Condiciones
 
-				input.check-terminos(type="checkbox", name="politicas",value="s",required)
+				input.check-terminos(type="checkbox", name="politicas",value="S",required)
 
 				em.text-ter-formulario.con-bottom
 					|Autorizo el manejo de mi información
-
+				input(type="hidden",name="varCtrl",value="2")
+				div#errorRegistro
 				button#btn-registrar.btns-registros(type="submit", value="Registrarse")
 						|Registrarse
 
@@ -113,9 +121,14 @@ block content
 					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quasi eum eius laborum pariatur quis nesciunt saepe ipsa nisi temporibus.
 		div.row
 			div.col-lg-4.col-md-3.col-sm-4.col-xs-11.col-lg-offset-0.col-md-offset-0.col-sm-offset-2.col-xs-offset-2.cont-form-iniciaS
-				form
-					input(type="text", placeholder="Ingresa tu código")
-
+				form#formCodigo
+					input(type="hidden",name="varCtrl",value="1")
+					input(type="text", placeholder="Ingresa tu código",name="codigo",onkeypress="return isNumber(event)")
+					div#errorCodigo
+						|C&oacute;digo invalido
+					button.btns-registros(type="submit", value="Ingresar")
+						|Ingresar
+					
 	section.cont-sec-playJ.ocultar-sect
 		div.row
 			div.col-lg-6.col-md-6.col-sm-5.col-xs-11.col-lg-offset-1.col-md-offset-3.col-sm-offset-1.col-xs-offset-1
@@ -125,22 +138,22 @@ block content
 			p.col-lg-4.col-md-2.col-sm-5.col-xs-11.col-lg-offset-5.col-md-offset-5.col-sm-offset-1.col-xs-offset-1.info-tiempo.info-tiempo
 				|1:00
 			div.col-lg-4.col-md-2.col-sm-5.col-xs-11.col-lg-offset-0.col-md-offset-0.col-sm-offset-0.col-xs-offset-0.icono-play-juego
-				a(href="#")
+				a(href="javascript:;",onClick="iniciaJuego();")
 					img.img-responsive(src="images/Inoco-Play.png")
 
-			button.btns-texto-solid.col-lg-4.col-md-2.col-sm-5.col-xs-11.col-lg-offset-0.col-md-offset-5.col-sm-offset-0.col-xs-offset-0
+			button.btns-texto-solid.col-lg-4.col-md-2.col-sm-5.col-xs-11.col-lg-offset-0.col-md-offset-5.col-sm-offset-0.col-xs-offset-0(onClick="iniciaJuego();")
 					| Jugar
 
 	section.cont-sec-trivia.ocultar-sect
 		div.row
 			div.cont-preguntas
-				h3.preguntas-trivia
+				h3.preguntas-trivia#cont-preguntas
 					| ¿Cuál de estas películas se convirtió en el primer largometraje colombiano nominado a un Oscar como mejor película extranjera?
 
 		div.row
-			div.col-lg-6.col-md-6.col-sm-12.col-xs-12.col-lg-offset-1.col-md-offset-3.col-sm-offset-0.col-xs-offset-0.cont-respuestas
+			div.col-lg-6.col-md-6.col-sm-12.col-xs-12.col-lg-offset-1.col-md-offset-3.col-sm-offset-0.col-xs-offset-0.cont-respuestas#cont-respuestas
 
-				div.col-lg-6.col-md-6.col-sm-6.col-xs-12
+				div#colum1-resp.col-lg-6.col-md-6.col-sm-6.col-xs-12
 
 					button.btns-respuestas
 						|a. Paraíso Travel
@@ -148,7 +161,7 @@ block content
 					button.btns-respuestas
 						|b. María llena eres de gracia
 
-				div.col-lg-6.col-md-6.col-sm-6.col-xs-12
+				div#colum2-resp.col-lg-6.col-md-6.col-sm-6.col-xs-12
 
 					button.btns-respuestas
 						|c. El abrazo de la serpiente
