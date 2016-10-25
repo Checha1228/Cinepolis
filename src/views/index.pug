@@ -3,7 +3,7 @@ extends ../templates/base
 
 //-Etiqueta Title
 block title
-	title Ejemplo de meta title
+	title Un final de película
 
 //-Etiqueta Metadescription
 block description
@@ -14,7 +14,7 @@ block content
 
 	div.cont-cort-der
 
-	section.cont-sec-home.ocultar-sect
+	section.cont-sec-home
 		div.row
 			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0.cont-textH
 				h2.textos-principales
@@ -94,7 +94,7 @@ block content
 						|*
 					input(type="text", placeholder="Contraseña", name="Contraseña", required )
 
-		div.row
+		div.row.margin-responsive
 
 			div.col-lg-4.col-md-4.col-sm-6.col-xs-12.col-lg-offset-4.col-md-offset-4.col-sm-offset-3.col-xs-offset-0
 				input.check-terminos(type="checkbox", name="Términos")
@@ -127,7 +127,7 @@ block content
 				h2.textos-principales
 					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint sit quidem consectetur quia animi ipsum est! Consectetur, optio, reprehenderit?
 		div.row
-			p.col-lg-4.col-md-2.col-sm-4.col-xs-6.col-lg-offset-5.col-md-offset-5.col-sm-offset-4.col-xs-offset-3.info-tiempo.info-tiempo
+			p.col-lg-4.col-md-2.col-sm-4.col-xs-6.col-lg-offset-5.col-md-offset-5.col-sm-offset-4.col-xs-offset-3.info-tiempo
 				|1:00
 			div.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-0.icono-play-juego
 				a(href="#")
@@ -137,11 +137,9 @@ block content
 					| Jugar
 
 	section.cont-sec-trivia.ocultar-sect
-		div.row
-			div.cont-preguntas
-				h3.preguntas-trivia
-					| ¿Cuál de estas películas se convirtió en el primer largometraje colombiano nominado a un Oscar como mejor película extranjera?
-
+		div.cont-preguntas
+			h3.preguntas-trivia
+				| ¿Cuál de estas películas se convirtió en el primer largometraje colombiano nominado a un Oscar como mejor película extranjera?
 		div.row
 			div.col-lg-6.col-md-6.col-sm-12.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-0.col-xs-offset-0.cont-respuestas
 
@@ -258,7 +256,7 @@ block content
 
 		div.row
 
-			button.btns-texto-solidB.col-lg-4.col-md-5.col-sm-4.col-xs-11.col-lg-offset-0.col-md-offset-0.col-sm-offset-0.col-xs-offset-0.btn-cont
+			button.btns-texto-solidB.col-lg-4.col-md-5.col-sm-4.col-xs-4.col-lg-offset-0.col-md-offset-0.col-sm-offset-0.col-xs-offset-0.btn-cont.cont-btn-conti
 					| Continuar
 
 
