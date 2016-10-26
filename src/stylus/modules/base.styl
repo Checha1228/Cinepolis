@@ -18,7 +18,7 @@ a
 	
 body, html
 	background-image url("../images/BgCine-General.png")
-	overflow hidden
+	overflow-x hidden
 h1
 	margin 0	
 
@@ -30,6 +30,9 @@ section
 	position relative
 	z-index 6
 
+.row
+	margin 0
+
 /*CORTNINAS*/
 	.cont-cort-izq
 		position absolute
@@ -39,7 +42,7 @@ section
 		width 50%
 		top 0
 		animation cortI 1s linear
-		left -400px
+		left -500px
 	
 	.cont-cort-izqB
 		position absolute
@@ -58,7 +61,7 @@ section
 		z-index 2
 		width 50%
 		top 0
-		right -400px
+		right -500px
 		animation cortD 1s linear 
 	
 	.cont-cort-derB
@@ -82,6 +85,10 @@ section
 
 .cont-text-Err
 	margin-top 2%
+
+.cont-text-Regis
+	margin-top 2%
+	margin-bottom 2%
 	
 .ocultar-sect
 	display none
@@ -107,9 +114,6 @@ section
 	margin-top 8%
 	margin-bottom 2%
 
-.cont-form-iniciaS
-	margin-left 38%
-
 .info-tiempo
 	color $Amarillo
 	text-shadow 1px 1px 0px $Negro
@@ -125,9 +129,9 @@ section
 	background-color $Blanco
 	width 70%
 	position absolute
-	top 0
+	top -96px
 	z-index 2
-	height 45%
+	height 73%
 	left calc(50% - 35%)
 	box-shadow 0 3px 3px 3px $Blanco
 	animation luz 0.6s infinite
