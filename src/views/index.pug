@@ -3,7 +3,7 @@ extends ../templates/base
 
 //-Etiqueta Title
 block title
-	title Ejemplo de meta title
+	title Un final de película
 
 //-Etiqueta Metadescription
 block description
@@ -19,10 +19,10 @@ block content
 		div.row
 			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0.cont-textH
 				h2.textos-principales
-					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus est ab, dolorum adipisci expedita ipsum nihil in id rem sequi numquam similique repudiandae rerum optio reiciendis error suscipit facere quidem.
-		div.row
-	
+					| ¿Quieres vivir tu propio final de película en Hollywood? ¡Esta es tu oportunidad! Haz compras mayores a $30.000 y recibe un código en una tarjeta. Regístrate aquí y empieza a participar en nuestra trivia cinéfila. ¡Entre más compres, más oportunidades tendrás para ganar!
 
+		div.row
+		
 			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0
 				div.col-lg-6.col-md-6.col-sm-6.col-xs-12.cont-btnG
 					button#inicia.btns-home
@@ -35,7 +35,7 @@ block content
 		div.row
 			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0.cont-textIS
 				h2.textos-principales
-					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed odit veniam quod libero, eaque similique est. Facilis, dicta repellendus alias.
+					|  ¡Inicia sesión, redime tu código y empieza a participar respondiendo la trivia!
 		div.row
 
 			div.col-lg-4.col-md-4.col-sm-6.col-xs-12.col-lg-offset-4.col-md-offset-4.col-sm-offset-3.col-xs-offset-0
@@ -52,12 +52,12 @@ block content
 						|Iniciar sesión
 
 	section.con-sec-registro.ocultar-sect
-		dov.row
+		div.row
 			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0.cont-text-Regis
 
 
 				h2.textos-principales.sin-bottom
-					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui obcaecati, dicta id inventore.
+					| Regístrate y empieza a participar para vivir tu propio final de película
 		form#formRegistro
 			div.row
 
@@ -90,7 +90,6 @@ block content
 							|Ciudad
 						option(value="Bogota")
 							|Bogota
-
 						option(value="Cali")
 							|Cali
 					em.asteric
@@ -105,10 +104,11 @@ block content
 						|*
 					input(type="password", placeholder="Contraseña", name="pass", required )
 
-			div.row
+			div.row.margin-responsive
 
 			div.col-lg-4.col-md-4.col-sm-6.col-xs-12.col-lg-offset-4.col-md-offset-4.col-sm-offset-3.col-xs-offset-0.cont-form-iniciaS
 				input.check-terminos(type="checkbox", name="terminos",value="S",required)
+
 
 
 				em.text-ter-formulario
@@ -147,7 +147,7 @@ block content
 				h2.textos-principales
 					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint sit quidem consectetur quia animi ipsum est! Consectetur, optio, reprehenderit?
 		div.row
-			p.col-lg-4.col-md-2.col-sm-4.col-xs-6.col-lg-offset-5.col-md-offset-5.col-sm-offset-4.col-xs-offset-3.info-tiempo.info-tiempo
+			p.col-lg-4.col-md-2.col-sm-4.col-xs-6.col-lg-offset-5.col-md-offset-5.col-sm-offset-4.col-xs-offset-3.info-tiempo
 				|1:00
 			div.col-lg-4.col-md-4.col-sm-4.col-xs-12.col-lg-offset-4.col-md-offset-4.col-sm-offset-4.col-xs-offset-0.icono-play-juego
 				a(href="javascript:;",onClick="iniciaJuego();")
@@ -157,11 +157,11 @@ block content
 					| Jugar
 
 	section.cont-sec-trivia.ocultar-sect
+
 		div.row
 			div.cont-preguntas
 				h3.preguntas-trivia#cont-preguntas
 					| ¿Cuál de estas películas se convirtió en el primer largometraje colombiano nominado a un Oscar como mejor película extranjera?
-
 		div.row
 
 			div.col-lg-6.col-md-6.col-sm-12.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-0.col-xs-offset-0.cont-respuestas#cont-respuestas
@@ -280,7 +280,7 @@ block content
 
 		div.row
 
-			button.btns-texto-solidB.col-lg-4.col-md-5.col-sm-4.col-xs-11.col-lg-offset-0.col-md-offset-0.col-sm-offset-0.col-xs-offset-0.btn-cont
+			button.btns-texto-solidB.col-lg-4.col-md-5.col-sm-4.col-xs-4.col-lg-offset-0.col-md-offset-0.col-sm-offset-0.col-xs-offset-0.btn-cont.cont-btn-conti
 					| Continuar
 
 block Scripts

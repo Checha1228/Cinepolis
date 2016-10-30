@@ -1,12 +1,13 @@
 {
-  "name": "frontend-brm",
-  "title": "frontend-brm",
-  "description": "Descripción del proyecto.",
+  "name": "Un final de película",
+  "title": "Un final de película",
+  "description": "Trivi Cincepolis",
   "version": "0.1.0",
   "homepage": "https://github.com/cortesc/HTML",
   "author": {
-    "name": "Cristian Cortés",
-    "email": "cristian.cortes@brm.com.co"
+    "name": "Lady Castillo",
+    "name": "Sebas Sanabria"
+
   },
   "repository": {
     "type": "git",
