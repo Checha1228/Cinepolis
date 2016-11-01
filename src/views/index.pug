@@ -3,7 +3,7 @@ extends ../templates/base
 
 //-Etiqueta Title
 block title
-	title Un final de película
+	title Cinepo
 
 //-Etiqueta Metadescription
 block description
@@ -16,9 +16,14 @@ block content
 	div.cont-cort-der
 
 	section.cont-sec-home
+		div.row.cont-video-H
+			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0
+				div.embed-responsive.embed-responsive-16by9
+					<iframe class="embed-responsive-item" width="100%" height="100" src="https://www.youtube.com/embed/sXYcjiGY8e4" frameborder="0" allowfullscreen></iframe>
 		div.row
-			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0.cont-textH
-				h2.textos-principales
+
+			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0.cont-textH(style="margin-top:0; margin-bottom:1%;")
+				h2.textos-principales(style=" margin-bottom:0;")
 					| ¿Quieres vivir tu propio final de película en Hollywood? ¡Esta es tu oportunidad! Haz compras mayores a $30.000 y recibe un código en una tarjeta. Regístrate aquí y empieza a participar en nuestra trivia cinéfila. ¡Entre más compres, más oportunidades tendrás para ganar!
 
 		div.row
@@ -145,7 +150,7 @@ block content
 		div.row
 			div.col-lg-6.col-md-6.col-sm-6.col-xs-12.col-lg-offset-3.col-md-offset-3.col-sm-offset-3.col-xs-offset-0.cont-text-Regis
 				h2.textos-principales
-					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint sit quidem consectetur quia animi ipsum est! Consectetur, optio, reprehenderit?
+					|¿Eres todo un cinéfilo? ¡Contesta estas preguntas y participa para vivir un final de película en Hollywood! Al finalizar.
 		div.row
 			p.col-lg-4.col-md-2.col-sm-4.col-xs-6.col-lg-offset-5.col-md-offset-5.col-sm-offset-4.col-xs-offset-3.info-tiempo
 				|1:00
